@@ -1,4 +1,5 @@
 var myAlert = 'Please enter a value greater then zero'
+var myNull = 'You have not entered a value in the input box'
 
 function euroToPounds(){
 
@@ -6,19 +7,25 @@ function euroToPounds(){
 
   var pounds = amount * 0.86;
   var message = amount + ' euros converts to ' + pounds + ' sterling.';
-	//check input greater than zero
+	//check input greater than zero, display conversion
 	if(amount>0) {
 	console.log(message);
 	document.getElementById("resultsentence").innerHTML = message;
 	}
-		//if not greater than zero, displat alert dialog window
-		else
-		alert(myAlert);
+		//if not greater than zero, display alert dialog window
+		else if(amount == 0) {
+		alert(myAlert)
+		}
+		
+			//alert when left blank
+			else{
+			alert(myNull)
+			}	
 }
 function euroToDollars(){
 
   var amount = parseInt(document.getElementById("value1").value);
-//euro to dollars calculation
+  //euro to dollars calculation
   var dollars = amount * 1.06;
   var message = amount + ' euros converts to ' + dollars + ' US Dollars.';
   
@@ -26,8 +33,15 @@ function euroToDollars(){
 	console.log(message);
 	document.getElementById("resultsentence").innerHTML = message;
 	}
-		else
-		alert(myAlert);
+		//if not greater than zero, display alert dialog window
+		else if(amount == 0) {
+		alert(myAlert)
+		}
+		
+			//alert when left blank
+			else{
+			alert(myNull)
+			}	
 }
 
 function euroToYen(){
@@ -41,8 +55,15 @@ function euroToYen(){
 	console.log(message);
 	document.getElementById("resultsentence").innerHTML = message;
 	}
-		else
-		alert(myAlert);
+		//if not greater than zero, display alert dialog window
+		else if(amount == 0) {
+		alert(myAlert)
+		}
+		
+			//alert when left blank
+			else{
+			alert(myNull)
+			}	
 }
 
 function euroToBitcoin(){
@@ -56,6 +77,13 @@ function euroToBitcoin(){
 	console.log(message);
 	document.getElementById("resultsentence").innerHTML = message;
 	}
-		else
-		alert(myAlert);
+		//if not greater than zero, display alert dialog window
+		else if(amount == 0) {
+		alert(myAlert)
+		}
+		
+			//alert when left blank
+			else{
+			alert(myNull)
+			}	
 }
